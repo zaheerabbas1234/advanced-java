@@ -22,7 +22,7 @@ public class StudentJDBC {
 
         // 2. Connect to Oracle DB
         Connection conn = DriverManager.getConnection(
-        	    "jdbc:oracle:thin:@localhost:1521:XE", "zaheer", "abbas");
+        	    "jdbc:oracle:thin:@localhost:1521:XE", "system", "tec");
 
 
         // 3. Create Statement
