@@ -15,39 +15,42 @@ package com.jdbc;
 
 import java.sql.*;
 
-public class StudentJDBC {
-    public static void main(String[] args) throws Exception {
+public class StudentJDBC 
+{
+    public static void main(String[] args) throws Exception 
+    {
         // 1. Load Oracle Driver
         Class.forName("oracle.jdbc.driver.OracleDriver");
 
         // 2. Connect to Oracle DB
         Connection conn = DriverManager.getConnection(
-        	    "jdbc:oracle:thin:@localhost:1521:XE", "system", "tec");
-
+                "jdbc:oracle:thin:@localhost:1521:XE", "system", "tec");
 
         // 3. Create Statement
         Statement stmt = conn.createStatement();
 
-        // a. Create Table (table name is now Abbas1)
-        stmt.executeUpdate("CREATE TABLE Abbas1 (RollNo NUMBER PRIMARY KEY, Name VARCHAR2(100), Address VARCHAR2(100))");
+        // a. Create Table (table name is now Student)
+        stmt.executeUpdate("CREATE TABLE Student (RollNo NUMBER PRIMARY KEY, Name VARCHAR2(100), Address VARCHAR2(100))");
 
         // b. Insert Few Records
-        stmt.executeUpdate("INSERT INTO Abbas1 VALUES (1, 'John', 'Hyderabad')");
-        stmt.executeUpdate("INSERT INTO Abbas1 VALUES (2, 'Priya', 'Delhi')");
+        stmt.executeUpdate("INSERT INTO Student VALUES (1, 'John', 'Hyderabad')");
+        stmt.executeUpdate("INSERT INTO Student VALUES (2, 'Priya', 'Delhi')");
 
         // c. Insert Two More Records
-        stmt.executeUpdate("INSERT INTO Abbas1 VALUES (3, 'Arjun', 'Mumbai')");
-        stmt.executeUpdate("INSERT INTO Abbas1 VALUES (4, 'vijay', 'Chennai')");
+        stmt.executeUpdate("INSERT INTO Student VALUES (3, 'Arjun', 'Mumbai')");
+        stmt.executeUpdate("INSERT INTO Student VALUES (4, 'Vijay', 'Chennai')");
 
         // d. Update One Record
-        stmt.executeUpdate("UPDATE Abbas1 SET Address='Bangalore' WHERE RollNo=2");
+        stmt.executeUpdate("UPDATE Student SET Address='Bangalore' WHERE RollNo=2");
 
         // e. Delete One Record
-        stmt.executeUpdate("DELETE FROM Abbas1 WHERE RollNo=2");
+        stmt.executeUpdate("DELETE FROM Student WHERE RollNo=2");
 
         // f. Display Final Records
-        ResultSet rs = stmt.executeQuery("SELECT * FROM Abbas1");
-        while (rs.next()) {
+        ResultSet rs = stmt.executeQuery("SELECT * FROM Student");
+
+        while (rs.next()) 
+        {
             System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
         }
 
@@ -56,6 +59,7 @@ public class StudentJDBC {
         conn.close();
     }
 }
+
 
 output
 ======
