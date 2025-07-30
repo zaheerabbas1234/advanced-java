@@ -1,3 +1,16 @@
+Experiment-1
+==============
+1. Write a JDBC application which will interact with Database and perform the following task.
+  
+a. Create Student Table with RollNo, Name, and Address field and insert few records.  
+b. Using Statement Object display the content of Record.  
+c. Using Statement Object Insert Two Record.  
+d. Using Statement Object Update One Record.  
+e. Using Statement Object Delete One Record.  
+f. Using Statement Object display the content of Record.
+ 
+=====================================================================================
+
 package com.jdbc;
 
 import java.sql.*;
@@ -30,7 +43,7 @@ public class StudentJDBC {
         stmt.executeUpdate("UPDATE Abbas1 SET Address='Bangalore' WHERE RollNo=2");
 
         // e. Delete One Record
-        stmt.executeUpdate("DELETE FROM Abbas1 WHERE RollNo=1");
+        stmt.executeUpdate("DELETE FROM Abbas1 WHERE RollNo=2");
 
         // f. Display Final Records
         ResultSet rs = stmt.executeQuery("SELECT * FROM Abbas1");
@@ -43,3 +56,9 @@ public class StudentJDBC {
         conn.close();
     }
 }
+
+output
+======
+1    John    Hyderabad
+3    Arjun   Mumbai
+4    vijay   Chennai
