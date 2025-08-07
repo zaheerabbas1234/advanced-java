@@ -1,0 +1,39 @@
+✅ Experiment 1: Using Statement Object
+=========================================
+1. What are the JDBC connectivity steps?
+2. How do you create a table using a Statement object in JDBC?
+3. Why is the Statement object considered less secure compared to PreparedStatement?
+4. How do you execute an SQL INSERT, UPDATE, or DELETE using a Statement object?
+5. What are the limitations of using Statement for dynamic queries?
+6. What is a Statement object in JDBC, and how is it different from PreparedStatement?
+7. how to create Connection?
+8. How to get the Connection?
+
+
+
+✅ Experiment 2: Using PreparedStatement Object
+================================================
+1. What is a PreparedStatement and how is it better than Statement?
+2. How does PreparedStatement prevent SQL injection?
+3. Can a PreparedStatement be reused for different sets of parameters? Explain with an example.
+4. How do you set parameters in a PreparedStatement before executing it?
+5. How does performance differ between Statement and PreparedStatement for repetitive operations?
+
+
+✅ Experiment 3: Scrollable ResultSet
+======================================
+1. What is a Scrollable ResultSet in JDBC?
+2. How do you create a scrollable ResultSet using JDBC?
+3. What are the differences between  TYPE_SCROLL_INSENSITIVE, and TYPE_SCROLL_SENSITIVE?
+4. What methods are used to move the cursor in a scrollable ResultSet?
+5. Can you modify the data in a scrollable ResultSet? Why or why not?
+
+
+✅ Experiment 4: Updatable ResultSet
+=====================================
+1. What is an updatable ResultSet in JDBC and how is it created?
+2. What are the required ResultSet types and concurrency modes to make a ResultSet updatable?
+3. How do you update a record directly using ResultSet methods?
+4. What are the methods used to insert or delete rows in an updatable ResultSet?
+5. Can you explain the difference between ResultSet.CONCUR_READ_ONLY and ResultSet.CONCUR_UPDATABLE?
+
