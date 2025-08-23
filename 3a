@@ -1,0 +1,63 @@
+<html>
+<head>    
+    <title>HTML5 Semantic Elements Example</title> 
+<style>
+        body {
+            font-family: Arial;
+        }
+        header, footer, nav, main, article, aside, section {
+            border: 1px;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav a {
+            margin-right: 15px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Articles</a>
+        <a href="#">Contact</a>
+      </nav>
+
+	
+    <main>
+        <section>
+            <h2>Featured Article</h2>
+            <article>
+                <header>
+                    <h3>Understanding HTML5 Semantic Tags</h3>
+                    <p>By Jane Doe - Web Developer</p>
+                </header>
+                <p>HTML5 introduced semantic elements that clearly describe their meaning in a human- and machine-readable way.</p>
+<figure>                
+      <img               	src="https://via.placeholder.com/300" 	alt="HTML5 Graphic" width="300">
+           <figcaption> An overview of HTML5        semantic elements.</figcaption>
+</figure>                
+<footer>
+      <p>Published on: August 23, 2025</p>
+</footer>
+   </article>
+ </section>
+
+<aside>
+    <h3>Related Links</h3>
+     <ul>    
+           <a href="#">What is Semantic HTML?</a>
+           <a href="#">Why Use HTML5?</a>  
+      </ul>      
+</aside>        
+    </main>
+</body>
+</html>
