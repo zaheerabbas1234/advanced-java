@@ -1,0 +1,80 @@
+eclipse ide download link
+=========================
+https://www.eclipse.org/downloads/
+
+
+
+
+tomcat server download link
+===========================
+https://tomcat.apache.org/download-90.cgi
+
+============================================
+*   after installing the tomcat server add the bin folder path in environment variables under path section
+
+edit the port
+Open conf folder  -- >  open  server.xml file  in a text editor.
+
+Find this line (usually around line 69):
+
+
+<Connector port="8080" protocol="HTTP/1.1"
+           connectionTimeout="20000"
+           redirectPort="8443" />
+
+Change the port number from 8080 to another number (e.g., 9090):
+
+
+<Connector port="9090" protocol="HTTP/1.1"
+           connectionTimeout="20000"
+           redirectPort="8443" />
+
+
+Step 3: Save and restart Tomcat
+Save the file.
+
+Restart your Tomcat server.
+
+Now, your application will run at http://localhost:9090 instead of http://localhost:8080.*    
+
+=================================================================================================
+how to integrate tomcat server with eclipse how?
+
+
+Apache Tomcat downloaded (e.g., Tomcat 9 or 10)
+👉 Download from: https://tomcat.apache.org
+
+✅ Step 1: Download and Extract Apache Tomcat
+Go to https://tomcat.apache.org
+
+Click on Tomcat 9 (or any version you want)
+
+Download the .zip version for Windows
+
+Extract the ZIP file to a location like:
+
+
+C:\apache-tomcat-9.x.x
+✅ Step 2: Configure Tomcat in Eclipse/STS
+Open Eclipse or Spring Tool Suite (STS)
+
+Go to the menu:
+Window > Preferences
+
+Expand:
+
+
+Server > Runtime Environments
+Click Add…
+
+Choose:
+
+
+Apache > Apache Tomcat v9.0 (or your version)
+Click Next
+
+Browse to the location where you extracted Tomcat, e.g.:
+
+
+C:\apache-tomcat-9.0.x
+Click Finish
