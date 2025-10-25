@@ -82,3 +82,18 @@ Click Finish
 h2-database jar file link
 ===================
 https://repo1.maven.org/maven2/com/h2database/h2/1.0.57/
+==========================================
+# H2 Database Configuration
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# Optional: Enable H2 console
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# Hibernate settings (if using JPA)
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
