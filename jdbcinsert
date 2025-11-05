@@ -1,0 +1,16 @@
+package abbas;
+import java.sql.*;
+public class Student 
+{
+	public static void main(String[] args) throws Exception 
+	{
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+        Connection conn = DriverManager.getConnection(
+                "jdbc:oracle:thin:@localhost:1521:XE", "system", "tec");
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate("insert into rama values (1, 'John', 'Hyderabad')");
+        stmt.executeUpdate("insert into rama values (2, 'rama', 'us')");
+        System.out.println("2 rows inserted successfully");
+        conn.close();
+	}
+}
