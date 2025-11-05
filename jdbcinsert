@@ -14,3 +14,29 @@ public class Student
         conn.close();
 	}
 }
+==============================================================================================================================================
+output:
+2 rows inserted successfully
+
+================================================================================================================================================
+package abbas;
+import java.sql.*;
+public class Student 
+{
+	public static void main(String[] args) throws Exception 
+	{
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+        Connection conn = DriverManager.getConnection(
+                "jdbc:oracle:thin:@localhost:1521:XE", "system", "tec");
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate("delete from rama where id=1");
+        System.out.println("1 row deleted successfully");
+        conn.close();
+	}
+}
+
+=======================================================================================================
+output:
+1 row deleted successfully
+
+
