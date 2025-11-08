@@ -97,3 +97,7 @@ spring.h2.console.path=/h2-console
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 
+==============================================================================================================================
+RUN SQL COMMAND LINE INTSALLATION LINK
+
+https://drive.google.com/drive/folders/19GSFMcBFJ6qXOhY0jIfV4ApijvZBYVzX?usp=sharing
